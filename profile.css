@@ -1,0 +1,259 @@
+/* Profile Page Specific Styles */
+.profile-container {
+    padding: 60px 0;
+    background-color: #F2FAF9; /* Light mint background like index */
+    min-height: calc(100vh - 100px);
+}
+
+.profile-circle-icon-top {
+    width: 45px;
+    height: 45px;
+    background-color: #1D4ED8; /* Blue like in image */
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Back Button */
+.back-navigation {
+    margin-bottom: 40px;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 900;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Cards Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.profile-card {
+    background: #FFFFFF;
+    border-radius: 40px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E2E8F0;
+}
+
+/* User Card */
+.user-main-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin-bottom: 40px;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.camera-btn-box {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #FFFFFF;
+    font-size: 1.1rem;
+}
+
+.user-name-display {
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.btn-edit-profile {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 800;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.btn-edit-profile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(91, 192, 190, 0.3);
+}
+
+/* Allergy Card */
+.card-title-red {
+    color: #C53030;
+    font-weight: 800;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+
+.allergy-badges {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.badge {
+    background: #C53030;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1.8rem;
+    box-shadow: 0 10px 20px rgba(197, 48, 48, 0.2);
+}
+
+.badge-icon-box {
+    font-size: 1.8rem;
+}
+
+.notes-box {
+    background-color: #EEF6FF;
+    border-radius: 20px;
+    padding: 25px;
+    color: #000000;
+    line-height: 1.4;
+    font-size: 1.1rem;
+}
+
+.notes-box strong {
+    color: #C53030;
+    font-weight: 800;
+}
+
+/* Doctor Card */
+.doctor-contact-card {
+    padding: 40px 50px;
+}
+
+.doctor-card-title {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.doctor-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.doctor-info-main {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.doctor-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 900;
+    font-size: 1.8rem;
+}
+
+.avatar-blue { background: #1D4ED8; }
+.avatar-cyan { background: #60A5FA; }
+
+.doctor-name {
+    font-weight: 900;
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.doctor-spec {
+    color: #718096;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.call-btn-blue {
+    width: 55px;
+    height: 55px;
+    background-color: #1D4ED8;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    transition: var(--transition);
+}
+
+.divider-line {
+    height: 1px;
+    background-color: #000000;
+    opacity: 0.5;
+    width: 100%;
+}
+
+/* Dark Mode Overrides for Profile */
+body.dark-mode .profile-container { background-color: #0F172A; }
+body.dark-mode .profile-card { background: #1E293B; border-color: #334155; }
+body.dark-mode .nav-item-link { color: #F8FAFC; }
+body.dark-mode .back-btn { color: #F8FAFC; }
+body.dark-mode .user-name-display, 
+body.dark-mode .doctor-card-title,
+body.dark-mode .doctor-name { color: #F8FAFC; }
+body.dark-mode .notes-box { background-color: #1E3A8A; color: #E2E8F0; }
+body.dark-mode .divider-line { background-color: #334155; }
+
+/* Responsive */
+@media (max-width: 992px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .doctor-info-main { gap: 15px; }
+    .doctor-avatar { width: 50px; height: 50px; font-size: 1.2rem; }
+    .doctor-name { font-size: 1.2rem; }
+    .badge { font-size: 1rem; padding: 8px 15px; }
+    .nav-links-desktop { display: none; }
+}

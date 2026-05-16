@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEALERGY - Hasil Diagnosis</title>
+    <link rel="stylesheet" href="results.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="results-header">
+        <h1>HASIL DARI DIAGNOSIS KAMI</h1>
+    </header>
+
+    <main class="results-container">
+        <!-- Card 1: Diagnosis -->
+        <div class="result-card">
+            <h2 class="card-title">DIAGNOSIS SELESAI</h2>
+            <p class="card-subtitle">Berdasarkan Gejala yang anda masukkan dan anda alami kami mendeteksi beberapa kondisi kesehatan anda</p>
+            <div class="result-list" id="diagnosis-list">
+                <!-- Will be populated by JS -->
+            </div>
+        </div>
+
+        <!-- Card 2: Advice -->
+        <div class="result-card">
+            <h2 class="card-title">SARAN PENANGANAN</h2>
+            <div class="result-list" id="advice-list">
+                <!-- Will be populated by JS -->
+            </div>
+        </div>
+
+        <!-- Card 3: Map -->
+        <div class="result-card">
+            <h2 class="card-title">TEMUKAN RS TERDEKAT</h2>
+            <div class="map-box">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15775.123456789!2d115.165!3d-8.685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sklinik!5e0!3m2!1sen!2sid!4v1620000000000!5m2!1sen!2sid" 
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="results-footer">
+            <button class="btn-teal" onclick="window.location.href='diagnosis.html'">DIAGNOSIS KEMBALI <i class="fas fa-arrow-right"></i></button>
+            <button class="btn-outline" onclick="window.location.href='index.html'"><i class="fas fa-arrow-left"></i> KEMBALI</button>
+        </div>
+    </main>
+
+    <script src="results.js"></script>
+</body>
+</html>

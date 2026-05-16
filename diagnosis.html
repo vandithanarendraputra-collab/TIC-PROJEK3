@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEALERGY - Diagnosis Alergi</title>
+    <link rel="stylesheet" href="diagnosis.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="diag-header">
+        <h1>PILIH JAWABAN SESUAI APA YANG ANDA ALAMI !!</h1>
+    </header>
+
+    <main id="diagnosis-container">
+        <div class="diag-card" id="question-card">
+            <div class="step-indicator" id="step-num">1</div>
+            <h2 class="question-text" id="question-text">Loading...</h2>
+            
+            <div class="options-grid">
+                <button class="option-btn" onclick="nextQuestion('ya')">
+                    <div class="option-icon icon-ya"><i class="fas fa-check-circle"></i></div>
+                    <span class="option-label">Ya</span>
+                </button>
+                <button class="option-btn" onclick="nextQuestion('sering')">
+                    <div class="option-icon icon-sering"><i class="fas fa-sync-alt"></i></div>
+                    <span class="option-label">Sering</span>
+                </button>
+                <button class="option-btn" onclick="nextQuestion('jarang')">
+                    <div class="option-icon icon-jarang"><i class="far fa-clock"></i></div>
+                    <span class="option-label">Jarang</span>
+                </button>
+                <button class="option-btn" onclick="nextQuestion('tidak')">
+                    <div class="option-icon icon-tidak"><i class="fas fa-times-circle"></i></div>
+                    <span class="option-label">Tidak</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="diagnosis.js"></script>
+</body>
+</html>

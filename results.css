@@ -1,0 +1,164 @@
+:root {
+    --diag-bg-start: #5BC0BE;
+    --diag-bg-end: #3A506B;
+    --white: #FFFFFF;
+    --text-dark: #1A202C;
+    --primary-teal: #5BC0BE;
+    --light-teal: #E6FFFA;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(135deg, var(--diag-bg-start), var(--diag-bg-end));
+    min-height: 100vh;
+    padding: 60px 20px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.results-header h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.results-container {
+    width: 100%;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.result-card {
+    background: var(--white);
+    border-radius: 40px;
+    padding: 50px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.card-title {
+    color: var(--primary-teal);
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.card-subtitle {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #4A5568;
+    max-width: 550px;
+    margin: 0 auto 30px;
+    line-height: 1.4;
+}
+
+/* List Items Styling */
+.result-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.result-item {
+    background: var(--light-teal);
+    border: 1px solid #B2F5EA;
+    border-radius: 25px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.result-item:hover { transform: translateX(10px); }
+
+.item-num {
+    width: 45px;
+    height: 45px;
+    background: #EDF2F7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.item-text {
+    font-weight: 800;
+    color: var(--primary-teal);
+    font-size: 1rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* Map Styling */
+.map-box {
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+/* Buttons Styling */
+.results-footer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.btn-teal {
+    background: #4FD1C5;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 18px;
+    border-radius: 50px;
+    font-weight: 900;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-teal:hover { background: #38B2AC; transform: scale(1.02); }
+.btn-outline:hover { background: rgba(255,255,255,0.1); transform: scale(1.02); }
+
+@media (max-width: 640px) {
+    .result-card { padding: 30px 20px; }
+    .card-title { font-size: 1.5rem; }
+    .item-text { font-size: 0.85rem; }
+}

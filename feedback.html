@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEALERGY - Berikan Komentar</title>
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .feedback-page-wrapper {
+            min-height: calc(100vh - 100px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+            background-color: var(--body-bg);
+        }
+        
+        /* Ensure the form matches the screenshot exactly */
+        .feedback-container {
+            background: var(--primary-color);
+            color: #FFFFFF;
+            max-width: 850px;
+            width: 100%;
+            border-radius: 40px;
+            padding: 60px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+            text-align: left;
+        }
+
+        .feedback-container .feedback-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 50px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .feedback-container .feedback-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .feedback-container label {
+            display: block;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .feedback-container input, 
+        .feedback-container textarea {
+            background: #FFFFFF;
+            border: none;
+            border-radius: 15px;
+            padding: 18px 25px;
+            width: 100%;
+            font-size: 1rem;
+            font-family: inherit;
+            color: #000000;
+            outline: none;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 12px;
+            font-size: 3rem;
+            color: rgba(255,255,255,0.4);
+            cursor: pointer;
+        }
+
+        .star-rating i.active {
+            color: #FFFFFF;
+        }
+
+        .btn-submit-feedback {
+            background: transparent;
+            border: 2px solid #FFFFFF;
+            color: #FFFFFF;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+
+        .btn-submit-feedback:hover {
+            background: #FFFFFF;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .feedback-footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <img src="assets/logo.png" alt="HEALERGY Logo" id="site-logo">
+                <div class="logo-text">
+                    <span class="brand-name">ALERGI MAKANAN</span>
+                    <span class="tagline">NAVIGASI AMAN ALERGI ANDA</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="index.html#home" class="nav-link">BERANDA</a>
+                <a href="index.html#why-us" class="nav-link">DIAGNOSIS</a>
+                <a href="index.html#about" class="nav-link">ABOUT US</a>
+                <a href="index.html#kontak" class="nav-link">KONTAK</a>
+            </nav>
+
+            <div class="auth-area" id="auth-area">
+                <!-- Logged Out View -->
+                <div id="logged-out-view">
+                    <a href="login.html" class="nav-link daftar-btn" data-i18n="nav-register">DAFTAR</a>
+                </div>
+
+                <!-- Logged In View -->
+                <div id="logged-in-view" style="display: none;">
+                    <div class="profile-trigger" id="profile-trigger">
+                        <img src="https://ui-avatars.com/api/?name=User&background=0046B4&color=fff" id="nav-user-img" class="nav-avatar" alt="User">
+                        <span id="nav-user-name" class="nav-username">User</span>
+                        <div class="profile-dropdown" id="profile-dropdown">
+                            <div class="dropdown-header">
+                                <p id="dropdown-name" class="d-name">User Name</p>
+                                <p id="dropdown-email" class="d-email">user@email.com</p>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item" id="edit-profile-btn"><i class="fas fa-user-edit"></i> <span data-i18n="edit-profile">Edit Profil</span></a>
+                            <a href="#" class="dropdown-item" id="dark-mode-toggle"><i class="fas fa-moon"></i> <span data-i18n="dark-mode">Mode Gelap</span></a>
+                            <a href="#" class="dropdown-item" id="lang-toggle"><i class="fas fa-globe"></i> <span id="lang-text">Bahasa: ID</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item logout-link" id="logout-btn"><i class="fas fa-sign-out-alt"></i> <span data-i18n="logout">Keluar</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="feedback-page-wrapper">
+        <div class="feedback-container">
+            <h2 class="feedback-title">BERIKAN PENGALAMAN BERKESAN ANDA</h2>
+            <form id="feedback-form">
+                <div class="feedback-row">
+                    <div class="form-group">
+                        <label for="feedback-name">Nama lengkap</label>
+                        <input type="text" id="feedback-name" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label>RATING</label>
+                        <div class="star-rating" id="star-rating">
+                            <i class="fas fa-star" data-value="1"></i>
+                            <i class="fas fa-star" data-value="2"></i>
+                            <i class="fas fa-star" data-value="3"></i>
+                            <i class="fas fa-star" data-value="4"></i>
+                            <i class="fas fa-star" data-value="5"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="feedback-message">Pesan Anda</label>
+                    <textarea id="feedback-message" rows="6" placeholder="Tulis pengalaman Anda di sini..." required></textarea>
+                </div>
+                <div class="feedback-footer">
+                    <button type="submit" class="btn-submit-feedback">
+                        Kirim Pesan <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer-new">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 HEALERGY. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

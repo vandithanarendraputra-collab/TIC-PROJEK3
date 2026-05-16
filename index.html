@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEALERGY - Navigasi Aman Alergi Makanan</title>
+    <meta name="description"
+        content="Dapatkan panduan lengkap navigasi makanan aman untuk Anda dan keluarga dengan HEALERGY. Temukan info bahan, substitusi cerdas, dan tips makan di luar.">
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <img src="assets/Logo.png" alt="HEALERGY Logo" id="site-logo">
+                <div class="logo-text">
+                    <span class="brand-name">ALERGI MAKANAN</span>
+                    <span class="tagline">NAVIGASI AMAN ALERGI ANDA</span>
+                </div>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">BERANDA</a>
+                <a href="diagnosis.html" class="nav-link">DIAGNOSIS</a>
+                <a href="#about" class="nav-link">ABOUT US</a>
+                <a href="#kontak" class="nav-link">KONTAK</a>
+            </nav>
+
+            <div class="auth-area" id="auth-area">
+                <!-- Logged Out View -->
+                <div id="logged-out-view">
+                    <a href="login.html" class="nav-link daftar-btn" data-i18n="nav-register">DAFTAR</a>
+                </div>
+
+                <!-- Logged In View -->
+                <div id="logged-in-view" style="display: none;">
+                    <div class="profile-trigger" id="profile-trigger">
+                        <img src="https://ui-avatars.com/api/?name=User&background=0046B4&color=fff" id="nav-user-img"
+                            class="nav-avatar" alt="User">
+                        <span id="nav-user-name" class="nav-username">User</span>
+                        <div class="profile-dropdown" id="profile-dropdown">
+                            <div class="dropdown-header">
+                                <p id="dropdown-name" class="d-name">User Name</p>
+                                <p id="dropdown-email" class="d-email">user@email.com</p>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item" id="edit-profile-btn"><i class="fas fa-user-edit"></i>
+                                <span data-i18n="edit-profile">Edit Profil</span></a>
+                            <a href="#" class="dropdown-item" id="dark-mode-toggle"><i class="fas fa-moon"></i> <span
+                                    data-i18n="dark-mode">Mode Gelap</span></a>
+                            <a href="#" class="dropdown-item" id="lang-toggle"><i class="fas fa-globe"></i> <span
+                                    id="lang-text">Bahasa: ID</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item logout-link" id="logout-btn"><i
+                                    class="fas fa-sign-out-alt"></i> <span data-i18n="logout">Keluar</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container hero-wrapper">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-i18n="hero-title">
+                        MAKAN DENGAN RASA AMAN,<br>
+                        <span class="highlight">TANPA ADA RASA CEMAS</span>
+                    </h1>
+                    <p class="hero-description" data-i18n="hero-desc">
+                        dengan HEALERGY anda bisa mendapat panduan lengkap navigasi makanan aman untuk Anda dan
+                        keluarga. Temukan info bahan, substitusi cerdas, dan tips makan di luar dengan tenang.
+                    </p>
+                    <div class="cta-wrapper">
+                        <a href="diagnosis.html" class="cta-outline-btn" id="start-diagnosis">
+                            MULAI DIAGNOSIS <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="teal-image-box">
+                        <img src="assets/Doctor.png" alt="Dokter Healergy" class="hero-img-new">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="content-section bg-light">
+            <div class="container">
+                <div class="vision-mission-wrapper">
+                    <!-- Misi Kami Card -->
+                    <div class="card mission-card">
+                        <div class="card-icon teal-bg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.44 4 16.08 4 12C4 11.38 4.08 10.78 4.21 10.21L9 15V16C9 17.1 9.9 18 11 18V19.93ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10H10C10.55 10 11 9.55 11 9V7H13C14.1 7 15 6.1 15 5V4.59C17.93 5.78 20 8.65 20 12C20 14.08 19.2 15.97 17.9 17.39Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <h2 class="card-title" data-i18n="mission-title">Misi Kami</h2>
+                        <ul class="card-list">
+                            <li data-i18n="mission-1">Menyediakan kurasi resep lezat yang bebas alergen tanpa
+                                mengorbankan rasa.</li>
+                            <li data-i18n="mission-2">Membangun komunitas suportif tempat berbagi pengalaman dan solusi
+                                praktis.</li>
+                            <li data-i18n="mission-3">Menghilangkan stigma dan rasa terisolasi bagi individu dengan
+                                pantangan makan.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Visi Kami Card -->
+                    <div class="card vision-card">
+                        <div class="card-icon white-bg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"
+                                    fill="#5BC0BE" />
+                            </svg>
+                        </div>
+                        <h2 class="card-title" data-i18n="vision-title">Visi Kami</h2>
+                        <p class="card-text" data-i18n="vision-desc">
+                            Menjadi ruang aman digital nomor satu yang memberdayakan pejuang alergi makanan untuk hidup
+                            tanpa rasa takut dan penuh rasa syukur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="content-section bg-light-mint">
+            <div class="container">
+                <div class="why-us-wrapper">
+                    <div class="why-us-content">
+                        <h2 class="section-title-left">MENGAPA HARUS MEMILIH KAMI?</h2>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt fa-2x" style="color: var(--primary-color);"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>AKURASI KETEPATAN</h3>
+                                <p>Setiap diagnosis anda 98% pasti benar karena kami sudah riset mendalam</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-lock fa-2x" style="color: var(--primary-color);"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>KEAMANAN TINGKAT TINGGI</h3>
+                                <p>keamanan data anda selama berada di website ini sudah pasti aman</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-robot fa-2x" style="color: var(--primary-color);"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>SELALU MELAKUKAN UPDATE</h3>
+                                <p>Kami selalu melakukan update database kami untuk diagnosa anda</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">ORANG PERCAYA</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">50</span>
+                            <span class="stat-label">KERJASAMA KLINIK</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">AKURASI DIAGNOSIS</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">10</span>
+                            <span class="stat-label">PENGHARGAAN RESMI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="content-section">
+            <div class="container">
+                <div class="section-header-center">
+                    <h2 class="section-title-center">APA KATA MEREKA?</h2>
+                    <p class="section-desc-center">Beberapa riview jujur dari beberapa pengguna yang pernah menggunakan
+                        website atau sistem dari website kami</p>
+                </div>
+                <div class="testimonial-grid">
+                    <!-- Card 1 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i>
+                        </div>
+                        <p class="testi-text">"Inovasi yang luar biasa! Sistem ini sangat membantu orang dengan alergi
+                            makanan untuk merasa lebih aman saat mencoba menu baru. Terima kasih sudah peduli dengan isu
+                            ini."</p>
+                        <div class="testi-user">
+                            <img src="https://i.pravatar.cc/100?u=alok1" alt="Alok Aleksander">
+                            <span>ALOK ALEKSANDER</span>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i>
+                        </div>
+                        <p class="testi-text">"Inovasi yang luar biasa! Sistem ini sangat membantu orang dengan alergi
+                            makanan untuk merasa lebih aman saat mencoba menu baru. Terima kasih sudah peduli dengan isu
+                            ini."</p>
+                        <div class="testi-user">
+                            <img src="https://i.pravatar.cc/100?u=alok2" alt="Alok Aleksander">
+                            <span>ALOK ALEKSANDER</span>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i>
+                        </div>
+                        <p class="testi-text">"Inovasi yang luar biasa! Sistem ini sangat membantu orang dengan alergi
+                            makanan untuk merasa lebih aman saat mencoba menu baru. Terima kasih sudah peduli dengan isu
+                            ini."</p>
+                        <div class="testi-user">
+                            <img src="https://i.pravatar.cc/100?u=alok3" alt="Alok Aleksander">
+                            <span>ALOK ALEKSANDER</span>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i>
+                        </div>
+                        <p class="testi-text">"Inovasi yang luar biasa! Sistem ini sangat membantu orang dengan alergi
+                            makanan untuk merasa lebih aman saat mencoba menu baru. Terima kasih sudah peduli dengan isu
+                            ini."</p>
+                        <div class="testi-user">
+                            <img src="https://i.pravatar.cc/100?u=alok4" alt="Alok Aleksander">
+                            <span>ALOK ALEKSANDER</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-cta">
+                    <a href="feedback.html" class="btn-pill-teal">
+                        <i class="fas fa-envelope"></i> BERIKAN KOMENTAR ANDA JUGA
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-final" class="content-section">
+            <div class="container">
+                <div class="cta-card-final">
+                    <h2 class="cta-title-final" data-i18n="cta-final-title">Siap Untuk Hidup Tenang?</h2>
+                    <p class="cta-text-final" data-i18n="cta-final-desc">
+                        Mulai dengan cara mengecek apakah anda memiliki alergi makanan <br>
+                        pada tubuh anda?, mari cek di sistem website kami klik sekarang
+                    </p>
+                    <a href="diagnosis.html" class="cta-btn-white" id="try-now-btn" data-i18n="cta-final-btn">
+                        COBA SEKARANG GRATIS!!!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="content-section">
+            <div class="container">
+                <div class="contact-header">
+                    <h2 class="contact-title" data-i18n="contact-title">HUBUNGI KAMI</h2>
+                    <p class="contact-subtitle" data-i18n="contact-desc">
+                        Bila mana ada bug atau kesalahan web dan design dari web kami anda bisa hubungi kami <br>
+                        untuk memberi kritik dan saran, anda juga bisa untuk melaporkan sesuatu yang berkaitan <br>
+                        tentang website kami
+                    </p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="contact-form-box">
+                        <form id="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nama lengkap</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Alamat Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="message">Pesan Anda</label>
+                                <textarea id="message" name="message" rows="8" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Kirim Pesan</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-map-box">
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15775.123456789!2d115.165!3d-8.685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sklinik!5e0!3m2!1sen!2sid!4v1620000000000!5m2!1sen!2sid"
+                                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
+                        </div>
+                        <div class="map-pill">
+                            BEBERAPA KLINIK YANG ADA DI SEKITAR
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-new">
+        <div class="container footer-wrapper">
+            <div class="footer-col brand-col">
+                <h2 class="footer-brand">FOOD ALERGI</h2>
+                <p class="footer-subtext">
+                    cek apakah anda alergi makanan atau tidak <br>
+                    supaya tenang saat ingin makan apapun
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">TENTANG</h3>
+                <ul class="footer-links footer-links-caps">
+                    <li><a href="#home" class="footer-link-item">BERANDA</a></li>
+                    <li><a href="diagnosis.html" class="footer-link-item">DIAGNOSIS</a></li>
+                    <li><a href="#about" class="footer-link-item">TENTANG KAMI</a></li>
+                    <li><a href="#kontak" class="footer-link-item">KONTAK</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">SUPPORT</h3>
+                <ul class="footer-links">
+                    <li><a href="#testimonials" class="footer-link-item">FAQs</a></li>
+                    <li><a href="privacy.html" class="footer-link-item">Cookie Policy</a></li>
+                    <li><a href="terms.html" class="footer-link-item">Syarat Penggunaan</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 HEALERGY. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Syarat Penggunaan -->
+    <div id="terms-modal" class="modal-overlay">
+        <div class="terms-box">
+            <div class="terms-header">
+                <h2>Syarat Penggunaan HEALERGY</h2>
+                <button class="close-modal" id="close-terms">&times;</button>
+            </div>
+            <div class="terms-body">
+                <div class="terms-section">
+                    <h3>1. Penerimaan Ketentuan</h3>
+                    <p>Dengan mengakses website HEALERGY, Anda setuju untuk terikat oleh syarat dan ketentuan penggunaan
+                        ini.</p>
+                </div>
+                <div class="terms-section">
+                    <h3>2. Bukan Saran Medis</h3>
+                    <p>Informasi dan diagnosis simulasi yang disediakan oleh website ini bertujuan untuk edukasi dan
+                        referensi awal saja. <strong>HEALERGY bukan pengganti konsultasi medis profesional.</strong>
+                        Selalu hubungi dokter Anda untuk masalah kesehatan serius.</p>
+                </div>
+                <div class="terms-section">
+                    <h3>3. Tanggung Jawab Pengguna</h3>
+                    <p>Pengguna bertanggung jawab penuh atas kebenaran data yang dimasukkan dalam sistem diagnosa kami.
+                    </p>
+                </div>
+                <div class="terms-section">
+                    <h3>4. Privasi & Keamanan</h3>
+                    <p>Kami menjamin keamanan data pribadi Anda selama menggunakan platform ini sesuai dengan standar
+                        keamanan tingkat tinggi kami.</p>
+                </div>
+                <div class="terms-section">
+                    <h3>5. Larangan</h3>
+                    <p>Dilarang menggunakan website ini untuk tindakan ilegal, merusak sistem, atau menyebarkan
+                        informasi palsu yang membahayakan pengguna lain.</p>
+                </div>
+                <p class="terms-footer">Terakhir diperbarui: Mei 2026</p>
+            </div>
+            <div class="terms-footer-btn">
+                <button class="cta-btn" id="terms-ok">Saya Mengerti</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cookie Policy -->
+    <div id="cookie-modal" class="modal-overlay">
+        <div class="terms-box">
+            <div class="terms-header">
+                <h2>Kebijakan Cookie HEALERGY</h2>
+                <button class="close-modal" id="close-cookie">&times;</button>
+            </div>
+            <div class="terms-body">
+                <div class="terms-section">
+                    <h3>Apa itu Cookie?</h3>
+                    <p>Cookie adalah file teks kecil yang disimpan di perangkat Anda untuk meningkatkan pengalaman
+                        browsing Anda.</p>
+                </div>
+                <div class="terms-section">
+                    <h3>Bagaimana Kami Menggunakan Cookie?</h3>
+                    <p>Kami menggunakan cookie untuk mengingat preferensi Anda, seperti pengaturan bahasa dan mode
+                        tampilan (Dark/Light Mode), serta untuk memudahkan proses login simulasi.</p>
+                </div>
+                <div class="terms-section">
+                    <h3>Pihak Ketiga</h3>
+                    <p>Beberapa layanan simulasi pihak ketiga (seperti simulasi Login Google/Apple) mungkin menggunakan
+                        cookie mereka sendiri untuk fungsionalitas teknis.</p>
+                </div>
+                <div class="terms-section">
+                    <h3>Mengelola Cookie</h3>
+                    <p>Anda dapat mengatur atau menghapus cookie melalui pengaturan browser Anda kapan saja. Namun,
+                        beberapa fitur website mungkin tidak berfungsi maksimal tanpa cookie.</p>
+                </div>
+            </div>
+            <div class="terms-footer-btn">
+                <button class="cta-btn" id="cookie-ok">Terima Kasih</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Edit Profil -->
+    <div id="edit-profile-modal" class="modal-overlay">
+        <div class="edit-profile-box">
+            <button class="close-modal" id="close-edit-modal">&times;</button>
+            <h2 class="modal-title">EDIT PROFIL</h2>
+            <form id="edit-profile-form">
+                <div class="edit-avatar-wrapper">
+                    <img src="https://ui-avatars.com/api/?name=User&background=0046B4&color=fff" id="edit-preview-img"
+                        alt="User">
+                    <label for="edit-upload-photo" class="edit-camera-btn">
+                        <i class="fas fa-camera"></i>
+                    </label>
+                    <input type="file" id="edit-upload-photo" hidden accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="edit-name" placeholder="Nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="edit-email" placeholder="Email Anda" readonly>
+                </div>
+                <div class="edit-modal-footer">
+                    <button type="submit" class="save-btn">SIMPAN PERUBAHAN</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Berikan Komentar -->
+    <div id="feedback-modal" class="modal-overlay">
+        <div class="feedback-box">
+            <button class="close-modal" id="close-feedback-modal">&times;</button>
+            <h2 class="feedback-title">BERIKAN PENGALAMAN BERKESAN ANDA</h2>
+            <form id="feedback-form">
+                <div class="feedback-row">
+                    <div class="form-group">
+                        <label>Nama lengkap</label>
+                        <input type="text" id="feedback-name" placeholder="Nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label>RATING</label>
+                        <div class="star-rating" id="star-rating">
+                            <i class="fas fa-star" data-value="1"></i>
+                            <i class="fas fa-star" data-value="2"></i>
+                            <i class="fas fa-star" data-value="3"></i>
+                            <i class="fas fa-star" data-value="4"></i>
+                            <i class="fas fa-star" data-value="5"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Pesan Anda</label>
+                    <textarea id="feedback-message" rows="5" placeholder="Tulis pengalaman Anda di sini..."
+                        required></textarea>
+                </div>
+                <div class="feedback-footer">
+                    <button type="submit" class="btn-send-feedback">Kirim Pesan <i
+                            class="fas fa-arrow-right"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
